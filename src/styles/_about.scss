@@ -1,0 +1,54 @@
+#about {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  @include flexbox(space-between, center);
+  background: $color-3;
+
+  
+  .profile-pic {
+    position: relative;
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    @include flexbox(center, center);
+    img {
+      clip-path: circle(50% at 50% 50%);
+      width: 80%;
+      height: auto;
+    }
+  }
+  .myself {
+    width: 50%;
+    padding: 5%;
+    font-family: "Fredoka One", cursive;
+    font-size: 2em;
+    color: #222;
+    .header {
+    // position: absolute;
+    // top: 50px;
+    // right: 4em;
+    font-family: "Signika Negative", sans-serif;
+    font-size: 2em;
+    color: #fff;
+  }
+  }
+}
+@media only screen and (max-width: 768px) {
+  #about{
+    flex-direction: column;
+    .profile-pic{
+      width: 100vw;
+    }
+    .myself{
+      width: 100vw;
+      
+      .header{
+        // width: 100vw;
+      
+        top:0;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@mixin widthHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin flexbox($content, $items) {
+  display: flex;
+  justify-content: $content;
+  align-items: $items;
+}
+@mixin marpad0 {
+  margin: 0 !important;
+  padding: 0 !important;
+}

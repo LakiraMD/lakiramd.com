@@ -1,0 +1,50 @@
+.blog {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $color-3;
+  padding: 20px;
+  a,
+  a:visited,
+  a:active {
+    color: #111;
+    text-decoration: none;
+  }
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  justify-content: center;
+  padding: 20px;
+  .blog-post {
+    margin-top: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: $color-6;
+    box-shadow: 0 8px 15px 1px #222;
+    @include flexbox(flex-start, center);
+    flex-direction: column;
+    border: double 6px transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(white, white),
+      radial-gradient(circle at top left, #0ff, #f0f);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px 15px 0 0;
+    }
+    .title {
+      font-size: 1.5em;
+      font-family: "Signika Negative", sans-serif;
+      width: 100%;
+      padding: 10px 0 0 10px;
+    }
+    .brief {
+      font-family: monospace;
+      width: 100%;
+      padding: 10px 0 0 10px;
+    }
+  }
+}

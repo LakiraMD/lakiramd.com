@@ -1,0 +1,211 @@
+.contact {
+  background: $color-1;
+  .container {
+    @include flexbox(center, center);
+    flex-direction: row-reverse;
+  }
+  .div-2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    .social-media {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 100px);
+      grid-gap: 5px;
+      justify-content: center;
+      a,
+      a:visited,
+      a:active {
+        color: #000;
+      }
+      a {
+        .social-icon {
+          width: 80px;
+          height: 80px;
+          @include flexbox(center, center);
+          transition: 0.3s;
+          transition-delay: 0.2s;
+          padding: 0;
+          border-radius: 50%;
+          font-size: 3em;
+          border-radius: 50%;
+          box-shadow: 2px 2px 10px 0 #111;
+          &:hover {
+            transform: translateY(-5px);
+            color: #fff;
+          }
+        }
+        &:nth-child(1):hover {
+          .social-icon{
+            background: #00B3E0;
+          }
+        }
+        &:nth-child(2):hover {
+          .social-icon{
+          background-color: #F00075;
+          }
+        }
+        &:nth-child(3):hover {
+          .social-icon{
+          background: #0274B3;
+          }
+        }
+        &:nth-child(4):hover {
+          .social-icon{
+          background: #171516;
+          }
+        }
+      }
+    }
+  }
+  .img-3 {
+    width: 50%;
+    margin-right: 0.4vw;
+    padding-top: 50px;
+
+    @include flexbox(center, center);
+
+    img {
+      height: auto;
+      // z-index: 10;
+      width: 40vw;
+      min-width: 300px;
+    }
+  }
+  .contact-form {
+    margin: 2%;
+    width: 100%;
+    height: auto;
+    background: #ffffff80;
+    .form {
+      padding: 2%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      font-family: "Roboto Mono", monospace;
+      textarea {
+        resize: none;
+        grid-column: span 2;
+        width: 97.5%;
+        margin: auto;
+        margin-bottom: 1em;
+        color: #fff;
+        border: none;
+        padding: 5px;
+        background: $color-3;
+        font-size: 1em;
+        &::placeholder {
+          color: #ddd;
+        }
+        &:focus,
+        &:active {
+          border: none;
+          outline: none;
+        }
+      }
+      .btn-submit {
+        grid-column: span 2;
+        width: 97.5%;
+        height: 3em;
+        background: $color-3;
+        margin: auto;
+        border: none;
+        font-family: "Roboto Mono", monospace;
+        font-size: 1em;
+        color: #fff;
+      }
+      .form-text {
+        width: 95%;
+        margin: auto;
+        margin-bottom: 1em;
+        height: 2em;
+      }
+      .form-input {
+        font-size: 1em;
+        color: #fff;
+        padding: 5px;
+        border: none;
+
+        &::placeholder {
+          color: #ddd;
+        }
+        background: $color-3;
+        &:focus,
+        &:active {
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+  footer {
+    font-size: 1.5em;
+    width: fit-content;
+    font-family: "Roboto Mono", monospace;
+    margin: auto;
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .contact-form {
+    // position: absolute;
+    // left: 0;
+    // bottom: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: red !important;
+    width: 100vw !important;
+    .form {
+      width: 100vw !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      max-width: unset !important;
+      .form-text {
+        grid-column: span 2;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact {
+    width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    .container {
+      flex-direction: column;
+      width: 100vw !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .social-media {
+      width: 100%;
+      padding: 0;
+      margin: 0%;
+    }
+    .img-3 {
+      margin: 0%;
+      padding: 0;
+      width: 100%;
+      img {
+        max-width: 420px;
+      }
+    }
+  }
+  // .contact-form {
+  //   // width: 100%;
+  // }
+}
+@media only screen and (max-width: 600px) {
+  .img-3 {
+    margin: 0%;
+    padding: 0;
+    width: 100%;
+    img {
+      max-width: 300px;
+    }
+  }
+}

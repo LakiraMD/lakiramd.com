@@ -1,0 +1,104 @@
+.bio {
+  min-height: 100vh;
+  min-width: 100vw;
+  @include flexbox(space-between, center);
+  flex-direction: row;
+  background: $color-1;
+  position: relative;
+  transition: 0.05s linear;
+  .div-1 {
+    width: 100%;
+  }
+  .bubble {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    aspect-ratio: 1 / 1.5;
+    min-width: 500px;
+    background: #fff;
+    clip-path: circle(50% at 25% 25%);
+    padding: 0 15% 0 0;
+    .para {
+      width: 80%;
+      position: absolute;
+      top: 30px;
+      left: 10px;
+      .intro,
+      .about {
+        font-family: "Signika Negative", sans-serif;
+        font-size: 1.5em;
+      }
+      .name {
+        font-family: "Fredoka One", cursive;
+        font-size: 2.8em;
+        padding: 0.5em 0 0.5em 0;
+      }
+    }
+  }
+  .img {
+    margin-right: 0.4vw;
+    padding-top: 50px;
+    align-self: flex-end;
+    img {
+      height: auto;
+      z-index: 10;
+      width: 40vw;
+      min-width: 300px;
+    }
+  }
+}
+
+/* media quaries */
+@media only screen and (max-width: 768px) {
+  .bio {
+    flex-direction: column;
+    padding: 0 !important;
+    margin: 0 !important;
+    .bubble {
+      width: 100vw !important;
+      position: relative;
+      aspect-ratio: none;
+      height: auto;
+      aspect-ratio: 1/0.65;
+      min-width: unset !important;
+      min-height: 100px !important;
+      padding: 0 ;
+      margin: 0 ;
+      clip-path: none;
+      border-radius: 0 0 50% 50%;
+      z-index: 5 !important;
+      @include flexbox(center, center);
+      .para {
+        text-align: center;
+        position: relative;
+        width: 100% !important;
+        padding: 0 ;
+        margin: 0 ;
+      }
+    }
+    .img {
+      z-index: 1;
+      align-self: center;
+      justify-self: center;
+      height: auto;
+      // background-color: red;
+      img {
+        height: auto;
+        width: 80vw;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bubble {
+    padding-top: 10px !important;
+    .para {
+      align-self: flex-start;
+      font-size: 70%;
+      inset: 0 !important;
+      padding:0 10% !important;
+    }
+  }
+}

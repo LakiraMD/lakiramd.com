@@ -1,0 +1,142 @@
+@import "./_mixins.scss";
+@import "./fontsAndColors";
+@import "./bio";
+@import'./about';
+@import "./skills";
+@import "./projects";
+@import "./blog";
+@import "./contact";
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+body {
+  @include widthHeight(100vw, 100vh);
+  font-size: 18px;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  position: absolute;
+  background: transparent;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  position: fixed;
+  .navbar {
+    padding: 1rem 1.5rem;
+    .nav-menu {
+      align-items: center;
+      justify-content: flex-end;
+      display: flex;
+      flex-direction: row;
+      .nav-item {
+        display: block;
+        padding: 10px;
+        font-size: 1.5em;
+        font-family: "Roboto Mono", monospace;
+      }
+    }
+    li {
+      list-style: none;
+    }
+    a,
+    a:visited,
+    a:active {
+      text-decoration: none;
+      color: #000080;
+    }
+  }
+  .hamburger {
+    width: 50px;
+    height: 40px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+    .bar {
+      width: 50px;
+      height: 10px;
+      background-color: $color-4;
+      display: block;
+      margin-top: 5px;
+      transition: 0.3s ease;
+      border-radius: 10px;
+    }
+  }
+}
+.skills,
+.projects,
+.contact {
+  width: 100vw;
+  // min-height: 100vh;
+  position: relative;
+  .header {
+    font-family: "Righteous", cursive;
+    font-size: 2.5em;
+    width: fit-content;
+    // margin: auto;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    z-index: 30;
+  }
+}
+
+
+
+/* media qusries */
+
+@media only screen and (max-width: 768px) {
+  header {
+    .navbar {
+      .nav-menu {
+        width: 250px;
+        position: absolute;
+        top: 0;
+        right: -250px;
+        height: 100vh;
+        @include flexbox(flex-start, center);
+
+        flex-direction: column;
+        background-color: #ffffffc5;
+        transition: 0.2s linear;
+
+        .nav-item {
+          display: block !important;
+        }
+      }
+      .hamburger {
+        display: initial;
+      }
+    }
+    .nav-menu.open {
+      right: 0;
+    }
+    .hamburger.open {
+      .bar:nth-child(1) {
+        transform: translateY(15px) rotate(45deg);
+      }
+      .bar:nth-child(2) {
+        transform: translateX(50px);
+        opacity: 0;
+      }
+      .bar:nth-child(3) {
+        // transform: rotate(-45deg);
+        transform: translateY(-15px) rotate(-45deg);
+      }
+    }
+  }
+}
