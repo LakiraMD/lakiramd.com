@@ -9,6 +9,11 @@
     color: #111;
     text-decoration: none;
   }
+  .header{
+    width: fit-content;
+    margin: auto;
+    padding-top: 20px;
+  }
 }
 
 .posts-grid {
@@ -31,9 +36,11 @@
     background-origin: border-box;
     background-clip: content-box, border-box;
     img {
-      width: 100%;
+      width: 90%;
       height: auto;
-      border-radius: 15px 15px 0 0;
+      margin: auto;
+      border: 1px #444 solid;
+      border-radius: 10px;
     }
     .title {
       font-size: 1.5em;

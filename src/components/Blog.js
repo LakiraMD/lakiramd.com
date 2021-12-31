@@ -17,6 +17,7 @@ function Blog() {
         brief
         coverImage
         slug
+        _id
       }
     }
   }
@@ -40,10 +41,10 @@ function Blog() {
   return (
     <div className='blog' id='blog'>
       <h1 className='header'>My Recent Blog Posts</h1>
-      <div className='posts-grid'>
+      <div className='posts-grid' >
         {
           posts.map((post) => (
-            <BlogPost header={post.title} brief={post.brief} img={post.coverImage} slug={post.slug} />
+            <BlogPost header={post.title} brief={post.brief} img={post.coverImage} slug={post.slug} key={post._id}/>
           ))
         }
       </div>
@@ -103,7 +104,7 @@ const BlogPost = (props) => {
     { target, eventOptions: { passive: false } }
   )
   return (
-    <a href={`https://blog.lakiramd.com/${props.slug}`} target="_blank" rel="noreferrer">
+    <a href={`https://blog.lakiramd.com/${props.slug}`} target="_blank" rel="noreferrer" key={props._id}>
       <animated.div className='blog-post' ref={target}
         style={{
           transform: 'perspective(600px)',

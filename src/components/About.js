@@ -5,9 +5,9 @@ function About() {
   return (
     <div className="about" id="about">
       <div className="profile-pic">
-        <img src={img} alt="lakira-md" data-aos="fade-down" />
+        <img src={img} alt="lakira-md" data-aos="fade-in" />
       </div>
-      <div className="myself" data-aos="fade-up">
+      <div className="myself" data-aos="fade-in">
         <h1 className="header">About Me</h1>
         <p >
         Hi there, I'm Lakira Minlaka, a 15 years old self-taught passionate
