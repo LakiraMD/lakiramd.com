@@ -13,7 +13,8 @@
     border-radius: 50%;
     @include flexbox(center, center);
     img {
-      clip-path: circle(50% at 50% 50%);
+      border: none;
+      border-radius: 59% 42% 59% 45% / 50% 36% 66% 51% ;
       width: 80%;
       height: auto;
     }
