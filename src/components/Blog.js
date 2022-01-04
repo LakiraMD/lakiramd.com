@@ -10,7 +10,7 @@ function Blog() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         query: `{
-  user(username: "lakira") {
+  user(username: "lakira-md") {
     publication{
       posts(page : 0) {
         title
