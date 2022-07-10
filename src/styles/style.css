@@ -1,9 +1,9 @@
 /* fonts */
-@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
-@import url("https://unpkg.com/aos@2.3.0/dist/aos.css");
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+@import url('https://unpkg.com/aos@2.3.0/dist/aos.css');
 /* colors */
 .bio {
   min-height: 100vh;
@@ -38,11 +38,11 @@
 }
 .bio .bubble .para .intro,
 .bio .bubble .para .about {
-  font-family: "Signika Negative", sans-serif;
+  font-family: 'Signika Negative', sans-serif;
   font-size: 1.5em;
 }
 .bio .bubble .para .name {
-  font-family: "Fredoka One", cursive;
+  font-family: 'Fredoka One', cursive;
   font-size: 2.8em;
   padding: 0.5em 0 0.5em 0;
 }
@@ -138,12 +138,12 @@
 #about .myself {
   width: 50%;
   padding: 5%;
-  font-family: "Fredoka One", cursive;
+  font-family: 'Fredoka One', cursive;
   font-size: 2em;
   color: #222;
 }
 #about .myself .header {
-  font-family: "Signika Negative", sans-serif;
+  font-family: 'Signika Negative', sans-serif;
   font-size: 2em;
   color: #fff;
 }
@@ -214,7 +214,7 @@
   transition: 0.3s ease-in;
   transition-delay: 0.1s;
   font-size: 2.4em;
-  color: #1B3B6F;
+  color: #1b3b6f;
   width: 80px;
   padding: 5px;
   aspect-ratio: 1/1;
@@ -287,7 +287,7 @@
   margin-top: 20px;
   width: 300px;
   height: 400px;
-  background-color: #F8F7F9;
+  background-color: #f8f7f9;
   box-shadow: 0 8px 15px 1px #222;
   display: flex;
   justify-content: flex-start;
@@ -295,7 +295,8 @@
   flex-direction: column;
   border: double 6px transparent;
   border-radius: 20px;
-  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #0ff, #f0f);
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, #0ff, #f0f);
   background-origin: border-box;
   background-clip: content-box, border-box;
 }
@@ -308,7 +309,7 @@
 }
 .posts-grid .blog-post .title {
   font-size: 1.5em;
-  font-family: "Signika Negative", sans-serif;
+  font-family: 'Signika Negative', sans-serif;
   width: 100%;
   padding: 10px 0 0 10px;
 }
@@ -365,13 +366,13 @@
   color: #fff;
 }
 .contact .div-2 .social-media a:nth-child(1):hover .social-icon {
-  background: #00B3E0;
+  background: #00b3e0;
 }
 .contact .div-2 .social-media a:nth-child(2):hover .social-icon {
-  background-color: #F00075;
+  background-color: #f00075;
 }
 .contact .div-2 .social-media a:nth-child(3):hover .social-icon {
-  background: #0274B3;
+  background: #0274b3;
 }
 .contact .div-2 .social-media a:nth-child(4):hover .social-icon {
   background: #171516;
@@ -399,7 +400,7 @@
   padding: 2%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 .contact .contact-form .form textarea {
   resize: none;
@@ -416,7 +417,8 @@
 .contact .contact-form .form textarea::placeholder {
   color: #ddd;
 }
-.contact .contact-form .form textarea:focus, .contact .contact-form .form textarea:active {
+.contact .contact-form .form textarea:focus,
+.contact .contact-form .form textarea:active {
   border: none;
   outline: none;
 }
@@ -427,7 +429,7 @@
   background: #b079ff;
   margin: auto;
   border: none;
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
   font-size: 1em;
   color: #fff;
 }
@@ -447,14 +449,15 @@
 .contact .contact-form .form .form-input::placeholder {
   color: #ddd;
 }
-.contact .contact-form .form .form-input:focus, .contact .contact-form .form .form-input:active {
+.contact .contact-form .form .form-input:focus,
+.contact .contact-form .form .form-input:active {
   border: none;
   outline: none;
 }
 .contact footer {
   font-size: 1.5em;
   width: fit-content;
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
   margin: auto;
   padding: 20px;
 }
@@ -536,15 +539,21 @@ body::-webkit-scrollbar {
 }
 
 header {
-  position: absolute;
   background: transparent;
   top: 0;
   width: 100%;
   z-index: 20;
   position: fixed;
+  transition: background 0.1s;
 }
+
+.scrolling-active {
+  background: white;
+  box-shadow: 0px 3px 1rem rgba(0, 0, 0, 0.2);
+}
+
 header .navbar {
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1.5rem;
 }
 header .navbar .nav-menu {
   align-items: center;
@@ -556,7 +565,7 @@ header .navbar .nav-menu .nav-item {
   display: block;
   padding: 10px;
   font-size: 1.5em;
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 header .navbar li {
   list-style: none;
@@ -579,7 +588,7 @@ header .hamburger {
 header .hamburger .bar {
   width: 50px;
   height: 10px;
-  background-color: #1B3B6F;
+  background-color: #1b3b6f;
   display: block;
   margin-top: 5px;
   transition: 0.3s ease;
@@ -597,7 +606,7 @@ header .hamburger .bar {
 .projects .header,
 .blog .header,
 .contact .header {
-  font-family: "Righteous", cursive;
+  font-family: 'Righteous', cursive;
   font-size: 2.5em;
   width: fit-content;
   margin-bottom: 20px;
